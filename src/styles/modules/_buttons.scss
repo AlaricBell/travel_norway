@@ -1,0 +1,30 @@
+.btn {
+  padding: 0.75rem;
+  border: none;
+  outline: none;
+  &-search {
+    margin: 0;
+    font-size: 18px;
+    background: darken($color-light, 8%);
+    color: $color-semi-dark;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-weight: weight(bold);
+  }
+
+  &-slide {
+    color: $color-primary-blue;
+    background-color: $color-light;
+    display: none;
+
+    &:hover {
+      color: $color-primary-red;
+    }
+  }
+
+  @include mq(md) {
+    &-slide {
+      display: block;
+    }
+  }
+}

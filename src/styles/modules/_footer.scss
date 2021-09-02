@@ -1,0 +1,56 @@
+footer {
+  @include flexy($dir: column, $just: center, $align: center);
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 1.25rem 0.75rem;
+  background: $color-light;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 85%;
+    height: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    background: $color-primary-blue;
+  }
+}
+
+.footer {
+  &-items {
+    @include flexy($dir: column, $just: center, $align: center);
+    width: 100%;
+    height: auto;
+    padding: 0.75rem 0;
+
+    .copy {
+      text-align: center;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    @include mq(md) {
+      .copy {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-item {
+    @include flexy($dir: column, $just: center, $align: flex-start);
+    height: auto;
+    width: 182px;
+
+    p {
+      padding: 0.25rem 0;
+    }
+  }
+
+  @include mq(sm) {
+    &-items {
+      @include flexy($dir: row, $just: space-around, $align: flex-start);
+    }
+  }
+}

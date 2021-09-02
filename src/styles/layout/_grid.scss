@@ -1,0 +1,72 @@
+.col {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+      width: 100%;
+      padding: 15px;
+    }
+  }
+
+  @include mq(sm) {
+    @for $i from 1 through 12 {
+      &-sm-#{$i} {
+        flex: 0 0 percentage($i / 12);
+        max-width: percentage($i / 12);
+        width: 100%;
+        padding: 15px;
+      }
+    }
+  }
+
+  @include mq(md) {
+    @for $i from 1 through 12 {
+      &-md-#{$i} {
+        flex: 0 0 percentage($i / 12);
+        max-width: percentage($i / 12);
+        width: 100%;
+        padding: 15px;
+      }
+    }
+  }
+
+  @include mq(lg) {
+    @for $i from 1 through 12 {
+      &-lg-#{$i} {
+        flex: 0 0 percentage($i / 12);
+        max-width: percentage($i / 12);
+        width: 100%;
+        padding: 15px;
+      }
+    }
+  }
+
+  @include mq(xl) {
+    @for $i from 1 through 12 {
+      &-xl-#{$i} {
+        flex: 0 0 percentage($i / 12);
+        max-width: percentage($i / 12);
+        width: 100%;
+        padding: 15px;
+      }
+    }
+  }
+}
+
+.row {
+  @include flexy($dir: row, $wrap: wrap, $just: center);
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row-nowrap {
+  @include flexy($dir: row, $just: center);
+  width: 100%;
+  //overflow: hidden;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.p-0 {
+  padding: 0;
+}

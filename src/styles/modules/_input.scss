@@ -1,0 +1,26 @@
+.form {
+  &-search {
+    @include flexy($dir: row, $just: center, $align: center);
+  }
+}
+
+.input {
+  &-search {
+    padding: 0.75rem;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: darken($color-light, 8%);
+    color: $color-semi-dark;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    width: 320px;
+    height: auto;
+    font-weight: weight(bold);
+  }
+}
+
+::placeholder {
+  font-weight: weight(bold);
+  color: $color-semi-dark;
+}
